@@ -1,0 +1,44 @@
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  
+  #main-doc {
+    padding: 20px;
+  }
+  
+  .nav-link {
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .main-section {
+    margin-bottom: 30px;
+  }
+  
+  .main-section header {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  code {
+    display: block;
+    background-color: #f1f1f1;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    margin-left: 20px;
+  }
+   @media (max-width: 600px) {
+        body {
+          background-color: lightgray;
+        }
+      }
+  

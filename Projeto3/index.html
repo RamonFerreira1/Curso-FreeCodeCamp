@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav id="navbar">
+    <header>Documentação Técnica</header>
+    <a class="nav-link" href="#javascript_and_java">JavaScript e Java</a>
+    <a class="nav-link" href="#html_and_css">HTML e CSS</a>
+    <a class="nav-link" href="#python">Python</a>
+    <a class="nav-link" href="#ruby">Ruby</a>
+    <a class="nav-link" href="#c_and_cplusplus">C e C++</a>
+  </nav>
+  
+  <main id="main-doc">
+    <section class="main-section">
+      <header>JavaScript e Java</header>
+      <p>Esta é a seção de JavaScript e Java.</p>
+      <p>Parágrafo adicional 1.</p>
+      <p>Parágrafo adicional 2.</p>
+      <code>console.log("Hello, World!");</code>
+      <p>Parágrafo adicional 3.</p>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+    </section>
+  
+    <section class="main-section">
+      <header>HTML e CSS</header>
+      <p>Esta é a seção de HTML e CSS.</p>
+      <p>Parágrafo adicional 1.</p>
+      <p>Parágrafo adicional 2.</p>
+      <code>&lt;p&gt;Exemplo de parágrafo&lt;/p&gt;</code>
+      <p>Parágrafo adicional 3.</p>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+    </section>
+  
+    <section class="main-section">
+      <header>Python</header>
+      <p>Esta é a seção de Python.</p>
+      <p>Parágrafo adicional 1.</p>
+      <code>print("Olá, Mundo!")</code>
+      <p>Parágrafo adicional 2.</p>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+    </section>
+  
+    <section class="main-section">
+      <header>Ruby</header>
+      <p>Esta é a seção de Ruby.</p>
+      <p>Parágrafo adicional 1.</p>
+      <code>puts "Olá, Mundo!"</code>
+      <p>Parágrafo adicional 2.</p>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+    </section>
+  
+    <section class="main-section">
+      <header>C e C++</header>
+      <p>Esta é a seção de C e C++.</p>
+      <p>Parágrafo adicional 1.</p>
+      <code>#include &lt;iostream&gt;</code>
+      <p>Parágrafo adicional 2.</p>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    const mainSections = document.querySelectorAll('.main-section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    mainSections.forEach(section => {
+      const firstChild = section.firstElementChild;
+      const sectionId = firstChild.textContent.replace(/ /g, '_');
+      section.setAttribute('id', sectionId);
+    });
+
+    navLinks.forEach((link, index) => {
+      const targetSection = mainSections[index];
+      const targetId = targetSection.getAttribute('id');
+      link.setAttribute('href', `#${targetId}`);
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>

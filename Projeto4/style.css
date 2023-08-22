@@ -1,0 +1,56 @@
+#header {
+    background-color: #f1f1f1;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  #header-img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  #nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  #nav-bar li {
+    margin-right: 10px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  #video {
+    width: 100%;
+  }
+  
+  #form {
+    margin-top: 20px;
+  }
+  
+  #email {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  #submit {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 600px) {
+    /* Estilos para dispositivos com largura de tela de até 600px */
+    #header {
+      padding: 5px;
+    }
+  }
+  
